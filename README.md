@@ -5,7 +5,6 @@ I am by no means an expert in OCaml, so this should serve as a nice learning exp
 
 ## Getting started
 
-<<<<<<< HEAD
 Place your inputs in a directory at the root of the project called `inputs/{year}`.
 Each input is named accordingly to their associated day. For day 1 of 2023, the input path will be `inputs/2023/1.txt`.
 For day 14 of 2016, `inputs/2016/14.txt`, etc.
@@ -19,7 +18,7 @@ You can run everything by just specifying the year :
 
 Tests can be run with `dune test`.
 If you wish to run the tests for an individual year, run :
-=======
+
 Place your inputs in a directory at the root of the project called `inputs/{year}`.
 Each input is named accordingly to their associated day. For day 1 of 2023, the input path will be `inputs/2023/1.txt`.
 For day 14 of 2016, `inputs/2016/14.txt`, etc.
@@ -33,5 +32,5 @@ You can run everything by just specifying the year :
 
 Tests can be run with `dune test`.
 If you wish to run the tests for an individual year, run :
->>>>>>> 966cb3f (overhaul)
+
 `dune test ./test/{year}`
