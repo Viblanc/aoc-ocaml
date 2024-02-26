@@ -1,0 +1,4 @@
+(test
+ (name test)
+ (deps (glob_files examples/*))
+ (libraries aoc alcotest))

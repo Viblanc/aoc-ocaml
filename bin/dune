@@ -1,0 +1,6 @@
+(include_subdirs qualified)
+
+(executables
+ (public_names 2022 2023)
+ (names year2022 year2023)
+ (libraries aoc))
