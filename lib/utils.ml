@@ -32,8 +32,8 @@ module Grid = struct
 
   type 'a t = { width : int; height : int; grid : 'a G.t }
 
-  let width { width; height = _; grid = _ } = width
-  let height { width = _; height; grid = _ } = height
+  let width grid = grid.width
+  let height grid = grid.height
 
   let of_nested_list l =
     let height, width = (List.length l, List.length (List.hd l)) in
@@ -43,14 +43,16 @@ module Grid = struct
     in
     { width; height; grid }
 
-  let find_opt pos { width = _; height = _; grid } = G.find_opt pos grid
-  let to_list { width = _; height = _; grid } = G.to_list grid
+  let find_opt pos g = G.find_opt pos g.grid
+  let to_list g = G.to_list g.grid
 
   let of_list l =
     let width = 1 + (List.map fst l |> List.map snd |> List.fold_left max 0) in
     let height = 1 + (List.map fst l |> List.map fst |> List.fold_left max 0) in
     let grid = G.of_list l in
     { width; height; grid }
+
+  let filter f g = { g with grid = G.filter f g.grid }
 
   let get_neighbors (x, y) grid =
     let neighbors = [ (x - 1, y); (x + 1, y); (x, y - 1); (x, y + 1) ] in
