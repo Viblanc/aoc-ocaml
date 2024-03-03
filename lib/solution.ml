@@ -37,7 +37,7 @@ module Solve (Sol : Year) = struct
     let parsed_input = D.parse filename in
     let p1, p2 = (D.part_1 parsed_input, D.part_2 parsed_input) in
     let print_sol i a =
-      Format.printf "Solution for part %d: " i;
+      Format.printf "Solution for part %d: \n" i;
       Format.printf "%a\n" Answer.pp_answer a
     in
     Format.printf "Solutions for day %d:\n" day;
