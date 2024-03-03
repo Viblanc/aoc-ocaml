@@ -15,6 +15,7 @@ module Year2022 = struct
       (module Year2022.Day06 : Solution.Day);
       (module Year2022.Day07 : Solution.Day);
       (module Year2022.Day08 : Solution.Day);
+      (module Year2022.Day09 : Solution.Day);
     |]
 end
 
