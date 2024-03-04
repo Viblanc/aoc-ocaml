@@ -49,9 +49,9 @@ let parse filename =
 
 let run_round monkeys scores f =
   let rec inspect_item idx monkey =
-    match Queue.take monkey.items with
-    | exception Queue.Empty -> ()
-    | item ->
+    match Queue.take_opt monkey.items with
+    | None -> ()
+    | Some item ->
         scores.(idx) <- scores.(idx) + 1;
         let item = f (monkey.operation item) in
         let nxt =

@@ -31,9 +31,9 @@ let rec bfs vertices grid seen =
       [ (x - 1, y); (x + 1, y); (x, y - 1); (x, y + 1) ]
     |> List.to_seq
   in
-  match Queue.take vertices with
-  | exception Queue.Empty -> failwith "not found"
-  | dist, pos ->
+  match Queue.take_opt vertices with
+  | None -> failwith "not found"
+  | Some (dist, pos) ->
       let x, y = pos in
       if grid.(x).(y) = 'E' then dist
       else
