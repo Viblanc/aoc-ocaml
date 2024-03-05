@@ -44,6 +44,7 @@ let suite =
              #######.......#######.......#######.....\n" ) );
     ("Day 11", `Quick, test_day 11 (Answer.Int 10605, Answer.Int 2713310158));
     ("Day 12", `Quick, test_day 12 (Answer.Int 31, Answer.Int 29));
+    ("Day 13", `Quick, test_day 13 (Answer.Int 13, Answer.Int 140));
   ]
 
 let () = Alcotest.run "Advent of Code" [ ("Year 2022", suite) ]
